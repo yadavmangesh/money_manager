@@ -1,1 +1,1 @@
-# expense_manager
+# money_manager

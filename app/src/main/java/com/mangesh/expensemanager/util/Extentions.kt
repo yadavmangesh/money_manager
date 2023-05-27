@@ -5,4 +5,4 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 
-fun Date.dd_mm_yyyy() = SimpleDateFormat("MM-dd-yyyy").format(this)
+fun Date.dd_mm_yyyy() = SimpleDateFormat("dd MMMM yyyy").format(this)

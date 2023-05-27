@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="6dp"
+    android:paddingHorizontal="16dp"
+    app:cardElevation="8dp"
+    android:layout_margin="16dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_expense_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/expense"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_expense"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tv_expense_label"
+            app:layout_constraintStart_toStartOf="@id/tv_expense_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_expense_label"
+            tools:text="$ 210" />
+
+        <View
+            android:id="@+id/expense_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="?android:attr/dividerVertical"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_expense_label"
+            app:layout_constraintEnd_toStartOf="@id/tv_income_label"
+            app:layout_constraintBottom_toTopOf="@id/progress_horizontal"
+            app:layout_constraintTop_toTopOf="@id/tv_expense_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_income_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/income"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/income_divider"
+            app:layout_constraintStart_toEndOf="@id/expense_divider"
+            app:layout_constraintTop_toTopOf="@id/tv_expense_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tv_income_label"
+            app:layout_constraintStart_toStartOf="@id/tv_income_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_income_label"
+            tools:text="$ 300" />
+
+        <View
+            android:id="@+id/income_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="?android:attr/dividerVertical"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_income_label"
+            app:layout_constraintEnd_toStartOf="@id/tv_total"
+            app:layout_constraintBottom_toTopOf="@id/progress_horizontal"
+            app:layout_constraintTop_toTopOf="@id/tv_income_label" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:layout_marginEnd="16dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_income_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/tv_total_label"
+            app:layout_constraintStart_toStartOf="@id/tv_total_label"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_label"
+            tools:text="$ 300" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:indicatorColor="@color/purple_500"
+            app:trackThickness="10dp"
+            tools:secondaryProgress="10"
+            android:indeterminateOnly="false"
+            android:indeterminate="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_expense" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

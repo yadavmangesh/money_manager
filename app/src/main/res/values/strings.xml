@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Expense Manager</string>
+    <string name="expense">Expenses</string>
+    <string name="income">Income</string>
+    <string name="total">Balance</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="transaction_description">Transaction Description</string>
+    <string name="add">Add</string>
+    <string name="select_transaction_type_error">Please select transaction type</string>
+    <string name="empty_description_error">Please enter transaction description</string>
+    <string name="empty_trasanction_amount_error">Please enter transaction amount</string>
+
+    <string-array name="transaction_type">
+        <item>Transaction type</item>
+        <item>Income</item>
+        <item>Expense</item>
+    </string-array>
+</resources>
